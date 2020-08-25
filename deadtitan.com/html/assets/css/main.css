@@ -482,10 +482,8 @@ ul.icons {
       left: 1.5em; } }
   @media screen and (max-height: 640px) {
     #logo {
-      bottom: auto;
-      left: auto;
-      margin: 0 0 0 0;
-      position: relative; } }
+      bottom: 2,5em;
+      left: 1.5em; } }
 
 /* Footer */
 #footer {
@@ -534,7 +532,5 @@ ul.icons {
       left: 1.25em; } }
   @media screen and (max-height: 640px) {
     #footer {
-      bottom: auto;
-      left: auto;
-      margin: 1em 0 0 0;
-      position: relative; } }
+      bottom: 1.25em;
+      left: 1.5em; } }
