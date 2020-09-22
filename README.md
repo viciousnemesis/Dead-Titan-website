@@ -1,2 +1,3 @@
 # DeadTitan
-A website for my band, Dead Titan.
+A website for my band, Dead Titan:  www.deadtitan.com
+
