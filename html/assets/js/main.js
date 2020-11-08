@@ -1,9 +1,75 @@
 /*
-	Eventually by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Template sourced from:
+		Eventually by HTML5 UP
+		html5up.net | @ajlkn
+		Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  
+	Modified by:
+    	Brandon Smith
+*/
+//
+// set up text to print, each item in array is new line
+/*(function() {
+	element = document.getElementById('typedtext');
+	var aText = element.textContent || element.innerHTML;
+	var iSpeed = 10; // time delay of print out
+	var iIndex = 0; // start printing array at this posision
+	var iArrLength = aText[0].length; // the length of the text array
+	var iScrollAt = 10; // start scrolling up at this many lines
+	 
+	var iTextPos = 0; // initialise text position
+	var sContents = ''; // initialise contents variable
+	var iRow; // initialise current row
+	 
+	function typewriter()
+	{
+	 sContents =  'Searching...';
+	 iRow = Math.max(0, iIndex-iScrollAt);
+	 var destination = document.getElementById("typedtext");
+	 destination.innerHTML = iRow.toString;
+	 while ( iRow < iIndex ) {
+	  sContents += aText[iRow++] + '<br />';
+	 }
+	 destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + ".";
+	 if ( iTextPos++ == iArrLength ) {
+	  iTextPos = 0;
+	  iIndex++;
+	  if ( iIndex != aText.length ) {
+	   iArrLength = aText[iIndex].length;
+	   setTimeout("typewriter()", 100);
+	  }
+	 } else {
+	  setTimeout("typewriter()", iSpeed);
+	 }
+	}
+	
+	if (aText.length > 0) {
+		typewriter();
+	}
+}());
 */
 
+// HAMBURGER MENU
+(function() {
+
+	var hamburger = {
+	  navToggle: document.querySelector('.nav-toggle'),
+	  nav: document.querySelector('nav'),
+  
+	  doToggle: function(e) {
+		e.preventDefault();
+		this.navToggle.classList.toggle('expanded');
+		this.nav.classList.toggle('expanded');
+	  }
+	};
+  
+	hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
+  
+  }());
+
+
+
+// FANCY BACKGROUND CYCLE
 (function() {
 
 	"use strict";

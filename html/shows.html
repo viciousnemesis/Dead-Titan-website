@@ -10,7 +10,7 @@
 -->
 <html>
 	<head>
-		<title>Dead Titan</title>
+		<title>Dead Titan - Shows</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -18,19 +18,49 @@
 	
 	<body class="is-preload">
 
+
+		<div class="bg_shader"></div>
+
 		<!-- Navigation Menu  -->
 		<div class="nav-toggle">
 			<div class="nav-toggle-bar"></div>
 		</div>
 		<nav class="nav">
 			<ul class=space_list>
-				<!--<li><a href="index.html">Home</a></li>-->
+				<li><a href="index.html">Home</a></li>
 				<li><a href="https://deadtitan.bandcamp.com/">Listen</a></li>
-				<li><a href="shows.html">Shows</a></li>				
+				<!--<li><a href="shows.html">Shows</a></li>-->
 				<li><a href="https://deadtitan.bandcamp.com/merch/">Merch</a></li>				
 				<li><a href="bio.html">Bio</a></li>
 			</ul>
 		</nav>
+
+
+		<div class="content">
+			<!-- FACEBOOK EVENTS -->
+			<div id="fb-root"></div>
+			<script async defer crossorigin="anonymous" 
+					src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" 
+					nonce="LswmxJ6m"></script>
+
+
+			<div class="fb-page" data-href="https://www.facebook.com/pg/deadtitan/events/?ref=page_internal" 
+				data-tabs="events" data-width="500" data-height="500" data-small-header="false" 
+				data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+				<blockquote cite="https://www.facebook.com/pg/deadtitan/events/?ref=page_internal" class="fb-xfbml-parse-ignore">
+					<a href="https://www.facebook.com/pg/deadtitan/events/?ref=page_internal"></a>
+				</blockquote>
+			</div>
+			<!--
+			<div id="fb-events" class="fb-page" data-href="https://www.facebook.com/deadtitan/events" 
+				data-tabs="events" data-width="adjustWidth()" data-height="adjustHeight()" 
+				data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
+				data-show-facepile="true">
+				<blockquote cite="https://www.facebook.com/deadtitan/events" class="fb-xfbml-parse-ignore">
+					<a href="https://www.facebook.com/deadtitan/events">Dead Titan</a>
+				</blockquote>
+			</div>-->
+		</div>
 
 		<!--  Dead Titan Text  -->
 		<footer id="logo">
@@ -54,7 +84,9 @@
 		</footer>
 
 		<!-- Scripts -->
-		<script src="assets/js/main.js"></script>
+		<script src="assets/js/main.js"></script>		
+		
+
 
 	</body>
 </html>

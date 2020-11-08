@@ -1,9 +1,13 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 /*
-	Eventually by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Template sourced from:
+		Eventually by HTML5 UP
+		html5up.net | @ajlkn
+		Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  
+	Modified by:
+    	Brandon Smith
 */
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -19,7 +23,7 @@ section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  /*font-size: 100%;*/
   font: inherit;
   vertical-align: baseline; }
 
@@ -65,7 +69,7 @@ input, select, textarea {
   width: device-width; }
 
 body {
-  -ms-overflow-style: scrollbar; }
+  -ms-overflow-style: none; }
 
 @media screen and (max-width: 480px) {
   html, body {
@@ -240,7 +244,7 @@ body, input, select, textarea {
       font-size: 12pt; } }
   @media screen and (max-width: 1280px) {
     body, input, select, textarea {
-      font-size: 11pt; } }
+      font-size: 12pt; } }
   @media screen and (max-width: 980px) {
     body, input, select, textarea {
       font-size: 12pt; } }
@@ -257,7 +261,7 @@ a {
   -ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
   transition: border-bottom-color 0.2s ease, color 0.2s ease;
   border-bottom: dotted 1px rgba(255, 255, 255, 0.25);
-  color: #7e3f7e;
+  color: #006fac;
   text-decoration: none; }
   a:hover {
     border-bottom-color: transparent;
@@ -396,7 +400,325 @@ header h6 + p {
   header br {
     display: none; } }
 
-/* Icon */
+/*#7e3f7e  #006fac */
+
+
+/* BACKGROUND SHADER */
+.bg_shader {
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;  
+  position: fixed;
+  left: 0;    
+  top: 0;
+  height: 150%;
+  width: 150%;
+  background: black;
+  opacity: 0.6;
+  z-index: 100; }
+
+
+
+
+/* CONTENT, above shader */
+.content {        
+  /*position: fixed;
+  left: 10%;      
+  top: 15%;
+  display: flex;
+  flex-wrap: wrap ;
+  
+  
+ 
+  height: 75%;
+  width: calc(min(80%, 500px));    
+  
+  */  
+  justify-content: center ;  
+  display: grid;  
+  grid-gap: 1rem;
+  grid-template: auto auto auto / minmax(150px, 500px);
+  z-index: 500;
+}
+  /*
+  @media screen and (max-width: 1680px) {
+    .content {
+      left: 3em; } }
+  @media screen and (max-width: 736px) {
+    .content {
+      left: 1.5em; } }
+  @media screen and (max-width: 360px) {
+    .content {
+      left: 1.5em; } }
+  @media screen and (max-height: 640px) {
+    .content {
+      left: 1.5em; } }
+      */
+
+
+.content .bio {  
+  grid-column: 1;
+}
+
+.content .members {
+  grid-column: 1;  
+}
+
+.content .photo {
+  grid-column: 1;  
+}
+.fisheye {
+  height: auto; 
+  max-width: 100%; 
+  background: rgba(0, 0, 0, 0);
+}
+
+
+.fb-page {        
+  /* seems to prevent glitching rectangle as fb-page loads */
+  visibility:hidden}     
+
+  @media screen and (max-width: 1680px) {
+    .fb-page {
+      height: 90%;
+      width: 90%;  } }
+  @media screen and (max-width: 736px) {
+    .fb-page {
+      height: 80%;
+      width: 80%;  } }
+  @media screen and (max-width: 360px) {
+    .fb-page {
+      height: 70%;
+      width: 70%;  } }
+  @media screen and (max-height: 640px) {
+    .fb-page {
+      height: 60%;
+      width: 60%;  } }
+
+      
+
+/* BACKGROUND SHADER */
+.bio {
+  -moz-transition: top 1.5s linear;
+  -webkit-transition: top 1.5s linear;
+  -ms-transition: top 1.5s linear;
+  transition: top 1.5s linear;  
+  position: fixed;
+  left: 0;    
+  top: 0;
+  height: 150%;
+  width: 150%;
+  background: black;
+  opacity: 0.6;
+  z-index: 100; }
+
+
+    
+/* Hamburger Menu Controls: sourced from: https://www.cssscript.com/basic-hamburger-toggle-menu-css-vanilla-javascript/*/
+.nav {
+  -webkit-transition: right 0.5s ease;
+  -moz-transition: right 0.5s ease;
+  -ms-transition: right 0.5s ease;
+  -o-transition: right 0.5s ease;
+  transition: right 0.5s ease;
+  background: #000000;
+  color: #7e3f7e;
+  cursor: pointer;
+  position: fixed;
+  top: 10%;
+  padding: 0rem 0rem 0rem 0rem; /* Top, Right, Bottom, Left*/
+  font-size: 2.8rem; /* Size of text */
+  height: 20rem;  /* Vertical placement of list, starts from hamburger */
+  right: -20rem;  /* How far off to the right side of screen the list starts */      
+  width: 17rem;  /* How far over the text comes to the left when toggled */
+  z-index: 1000;
+}
+
+@media screen and (max-width: 1680px) {
+  .nav {
+    font-size: 2.5rem; /* Size of text */
+    height: 15rem;  /* Vertical placement of list, starts from hamburger */
+    right: -18rem;  /* How far off to the right side of screen the list starts */      
+    width: 15rem;  /* How far over the text comes to the left when toggled */       
+  } }
+@media screen and (max-width: 980px) {
+  .nav {
+    font-size: 2.3rem; /* Size of text */
+    height: 15rem;  /* Vertical placement of list, starts from hamburger */
+    right: -16rem;  /* How far off to the right side of screen the list starts */      
+    width: 13rem;  /* How far over the text comes to the left when toggled */        
+  } }
+@media screen and (max-width: 736px) {
+  .nav {
+    font-size: 2.0rem; /* Size of text */
+    height: 15rem;  /* Vertical placement of list, starts from hamburger */
+    right: -15rem;  /* How far off to the right side of screen the list starts */      
+    width: 11rem;  /* How far over the text comes to the left when toggled */        
+  } }
+@media screen and (max-width: 640px) {
+  .nav {
+    font-size: 1.7rem;/* Size of text */
+    height: 15rem;  /* Vertical placement of list, starts from hamburger */
+    right: -14rem;  /* How far off to the right side of screen the list starts */      
+    width: 9rem;  /* How far over the text comes to the left when toggled */        
+    } }
+@media screen and (max-width: 360px) {
+  .nav {
+    font-size: 1.6rem;/* Size of text */
+    height: 15rem;  /* Vertical placement of list, starts from hamburger */
+    right: -12rem;  /* How far off to the right side of screen the list starts */      
+    width: 7rem;  /* How far over the text comes to the left when toggled */
+    
+  } }
+
+.nav.expanded { 
+  right: 0;       
+  top: 10%;
+}
+
+ul.space_list li { 
+  margin-bottom: .5em; 
+  list-style-type: none;
+  z-index: 1000;}
+
+.nav ul {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-toggle {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  position: fixed;      
+  right: 2rem;      
+  top: 2rem;
+  height: 3.6rem;
+  width: 3.6rem;
+  z-index: 1100;
+}
+@media screen and (max-width: 1680px) {
+  .nav-toggle {        
+    top: 2rem;
+    height: 3.5rem;
+    width: 3.5rem;  
+  } }
+@media screen and (max-width: 980px) {
+  .nav-toggle {        
+    top: 2rem;
+    height: 3.4rem;
+    width: 3.4rem;  
+  } }
+@media screen and (max-width: 736px) {
+  .nav-toggle{           
+    top: 2rem;
+    height: 3.3rem;
+    width: 3.3rem;  
+  } }
+@media screen and (max-width: 640px) {
+  .nav-toggle {         
+    top: 2rem;
+    height: 3.2rem;
+    width: 3.2rem;  
+    } }
+@media screen and (max-width: 360px) {
+  .nav-toggle{          
+    top: 2rem;
+    height: 3.0rem;
+    width: 3.0rem;  
+  } }
+
+.nav-toggle:hover {
+  opacity: 0.7;
+}
+
+.nav-toggle .nav-toggle-bar{      
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #7e3f7e;
+  position: absolute;
+  top: 10%;
+  content: '';
+  margin-top: 1.0rem;
+  width: 100%;
+  height: 15%;    
+}
+
+.nav-toggle .nav-toggle-bar::after {      
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #7e3f7e;
+  position: absolute;
+  /*top: 50%;*/
+  content: '';
+  margin-top: 35%; 
+  width: 100%;
+  height: 100%;  
+}
+
+.nav-toggle .nav-toggle-bar::before {      
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #7e3f7e;
+  position: absolute;
+  /*top: 50%;*/
+  content: '';
+  margin-top: -20%; 
+  width: 100%;
+  height: 100%;    
+}
+
+.nav-toggle.expanded .nav-toggle-bar { background: transparent; }
+
+.nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
+  background: #006fac;
+  margin-top: 0;
+}
+
+.nav-toggle.expanded .nav-toggle-bar::after {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.nav-toggle.expanded .nav-toggle-bar::before {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+/* Icons */
 .icon {
   text-decoration: none;
   border-bottom: none;
@@ -421,7 +743,7 @@ header h6 + p {
   .icon.brands:before {
     font-family: 'Font Awesome 5 Brands'; }
 
-/* List */
+/* Footer List of Social icons  */
 ol {
   list-style: decimal;
   margin: 0 0 2em 0;
@@ -452,8 +774,12 @@ ul.icons {
       color: inherit; }
 
 
+
+
+
+
       
-/* Logo */
+/* Dead Titan Text Logo */
 #logo {
   -moz-transition: opacity 0.5s ease-in-out;
   -webkit-transition: opacity 0.5s ease-in-out;
@@ -484,6 +810,10 @@ ul.icons {
     #logo {
       bottom: 2,5em;
       left: 1.5em; } }
+
+
+
+
 
 /* Footer */
 #footer {
